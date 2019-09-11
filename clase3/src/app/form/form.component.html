@@ -1,0 +1,30 @@
+<form class="form">
+  <div class="form-group">
+    <input class="form-control" type="text" placeholder="nombre" [(ngModel)]="dato.nombre" name="name" />
+  </div>
+  <div class="form-group">
+  <input class="form-control" type="number" placeholder="edad" [(ngModel)]="dato.edad" name="edad" />
+</div>
+  <div class="form-group">
+  <select class="form-control" placeholder="sexo" [(ngModel)]="dato.sexo" name="sexo">
+    <option>femenino</option>
+    <option>masculino</option>
+    <option>prefiero no especificarlo</option>
+  </select>
+</div>
+  <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" [(ngModel)]="dato.licencia" name="licencia">
+      <label class="form-check-label" for="exampleCheck1">tiene licencia</label>
+    </div>
+  <label>fecha de nacimiento</label>
+<div class="form-group">
+  <input class="form-control" type="date" [(ngModel)]="dato.nacimiento_fecha" name="fecha"/>
+</div>
+  <div class="form-group">
+  <input class="form-control" type="number" placeholder="sueldo" [(ngModel)]="dato.sueldo" name="sueldo"/>
+</div>
+  <button class="btn btn-primary" (click)="manejadora($event)">Aceptar</button>
+</form>
+
+
+

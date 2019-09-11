@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <tr *ngIf="datos.length > 0" >
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Sexo</th>
+        <th>Sueldo</th>
+        <th>Licencia</th>
+        <th>Fecha de Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of datos" app-lista [item] = "item" >
+    </tr>
+  </tbody>
+</table>
