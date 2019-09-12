@@ -9,6 +9,8 @@ import { SaludarComponent } from './saludar/saludar.component';
 import { ListadoComponent } from './listado/listado.component';
 import { ListaComponent } from './lista/lista.component';
 import { BooleanPipe } from './pipes/boolean.pipe';
+import { PaisesComponent } from './componentes/paises/paises.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { BooleanPipe } from './pipes/boolean.pipe';
     ListadoComponent,
     ListaComponent,
     BooleanPipe,
+    PaisesComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
