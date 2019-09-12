@@ -11,6 +11,8 @@ import { ListaComponent } from './lista/lista.component';
 import { BooleanPipe } from './pipes/boolean.pipe';
 import { PaisesComponent } from './componentes/paises/paises.component';
 import { HttpClientModule } from '@angular/common/http';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { HttpClientModule } from '@angular/common/http';
     ListadoComponent,
     ListaComponent,
     BooleanPipe,
-    PaisesComponent,
+    PaisesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
