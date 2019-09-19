@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiciofirestoneService } from '../../servicios/serviciofirestone.service';
 
 @Component({
   selector: 'app-clientes',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service: ServiciofirestoneService) { }
 
   ngOnInit() {
+    console.log(this.service.items);
   }
 
 }
