@@ -9,15 +9,27 @@ export class UserServiceService {
   user = null;
   constructor(private http: HttpClient) { }
 
-  isAuthenticated(){ return this.user? true:false;}
+  isAuthenticated(){
+
+//TODO: preguntar por el token https://github.com/auth0/angular2-jwt
+    return this.user? true:false;
+  }
 
   setUser(user){
     var body = {cliente : user};
-    return this.http.post('192.168.2.85:3003/clientes',body);
+    return this.http.post('http://192.168.2.85:3003/clientes',body);
   }
+
+  // testGet(){
+  //   return this.http.get('http://192.168.2.85:3003/clientes');
+  // }
 
   getUser(user){
     var body = {cliente : user};
-    return this.http.post('192.168.2.85:3003/login',body);
+    return this.http.post('http://192.168.2.85:3003/login',body);
+  }
+
+  setToken(token) {
+    localStorage.setItem('token', token);
   }
 }

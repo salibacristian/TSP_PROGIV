@@ -18,12 +18,19 @@ export class LoginComponent implements OnInit {
   }
   login() {
     this.service.getUser(this.user)
-    .subscribe(arg => {this.service.user = arg; console.log(this.user); }
+    .subscribe(arg => {
+      console.log(arg);
+       this.service.setToken(arg);
+
+      }
       , e => { console.log(e); });
   }
   register() {
     this.service.setUser(this.user)
-    .subscribe(arg => {this.service.user  = arg; console.log(this.user); }
+    .subscribe(arg => {
+      console.log(arg);
+      console.log(this.user);
+    }
       , e => { console.log(e); });
   }
 
