@@ -14,6 +14,10 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['clientes']);
   }
 
+  goToAutos() {
+    this.router.navigate(['autos']);
+  }
+
   ngOnInit() {
   }
 
