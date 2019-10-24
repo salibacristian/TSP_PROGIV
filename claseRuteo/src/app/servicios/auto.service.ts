@@ -7,7 +7,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class AutoService {
 
   constructor(private http: HttpClient
-    // ,     private header: HttpHeaders
+
      ) { }
 
 
@@ -27,8 +27,8 @@ export class AutoService {
   setAuto(auto){
     var body = {auto : auto};
     var token = localStorage.getItem('token');
-    // const headers = new HttpHeaders({'token':token});
-    return this.http.post('http://192.168.2.32:3003/auto',body,{});
+     const headers = new HttpHeaders({'token':token});
+    return this.http.post('http://192.168.2.32:3003/auto',body,{headers});
   }
 
   // setTurno(turno){
